@@ -6,7 +6,8 @@ from coolsite import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('sportsman.urls')),
-]
+] \
+              # + debug_toolbar_urls()
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
